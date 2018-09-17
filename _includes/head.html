@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
     {% if page.math %}
-    <link rel="stylesheet" href="{{ "/katex/katex.min.js" | prepend: site.baseurl }}" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "/katex/katex.min.css" | prepend: site.baseurl }}" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script defer src="{{ "/katex/katex.min.js" | prepend: site.baseurl }}" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
 
     <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="{{ "/katex/auto-render.min.js" | prepend: site.baseurl }}" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+    <script defer src="{{ "/katex/contrib/auto-render.min.js" | prepend: site.baseurl }}" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
     {% endif %}
 
