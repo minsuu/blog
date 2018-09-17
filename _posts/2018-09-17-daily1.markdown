@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "daily #1"
+date:   2018-09-17 17:12:00 +0900
+categories: jekyll update
+---
+I've took [Kakao blind test][kakao] last week.
+It was an online coding test that took about 5hrs long.
+I was shocked that I've missed 2 problems out of 7!
+
+The first of the two was about reconstructing a tree given points
+with the $(x,y)$ coordinate, from specific rules like
+(a) parent has bigger $y$ coordinate than its children, and 
+(b) the left child has smaller $x$ coodrdinate than its parent.
+I implemented it with recursion, then faced RTE(runtime error).
+I once thought about the stack depth, however, denied that possiblity
+since the maximum depth of a tree was $1000$. It was a sheer misunderstanding.
+
+Only after the test I found [that][slimit] Python has a very limited recursion depth($<998$).
+It was due to my first time using python in a test, and also this gave me a precious lesson using Python: *never think of using recursion*.
+I also once read about [function call overhead][func] in Python.
+I sought after some optimizations for function calls in Python, but hardly could find any.
+
+[kakao]: https://www.welcomekakao.com/competitions/79/2019-2nd-kakao-blind-recruitment
+[slimit]: https://stackoverflow.com/questions/3323001/what-is-the-maximum-recursion-depth-in-python-and-how-to-increase-it
+[func]: https://stackoverflow.com/questions/5790860/and-vs-list-and-dict-which-is-better

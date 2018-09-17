@@ -6,7 +6,6 @@ author: Minsu Kim
 email: minsu@kaist.ac.kr
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://minsuu.github.io" # the base hostname & protocol for your site
-twitter_username: hybrid_alex
 github_username:  minsuu
 
 # Build settings
