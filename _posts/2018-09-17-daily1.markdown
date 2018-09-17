@@ -37,7 +37,8 @@ I used the this regular expression.
 However, it was not able to count the case
 `WORD\nWORD` correctly. It is because `\Z` actually consumes one character,
 so that the next word cannot take one for next `\A` match.. Sigh.
-I am thinking about the correct version, but I thknk it needs some research.
+I am thinking about the correct version, but I think it needs some research.
+(Actually, it's [said][re] that this kind of thing is what RE is goot at.)
 
 To be honest, I seriously thought it will be a piece of cake
 (like qualification rounds in Google Codejam).
@@ -50,3 +51,4 @@ I discovered it was a massive failure :smile:.
 [kakao]: https://www.welcomekakao.com/competitions/79/2019-2nd-kakao-blind-recruitment
 [slimit]: https://stackoverflow.com/questions/3323001/what-is-the-maximum-recursion-depth-in-python-and-how-to-increase-it
 [func]: https://stackoverflow.com/questions/5790860/and-vs-list-and-dict-which-is-better
+[re]: https://stackoverflow.com/questions/406230/regular-expression-to-match-a-line-that-doesnt-contain-a-word
