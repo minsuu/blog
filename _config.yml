@@ -1,13 +1,13 @@
 # Site settings
-title: Butane Jekyll Theme
+title: daily.log
 description: >
-    This is an example of the Butane Jekyll Theme created by Alex Carpenter
-author: Alex Carpenter
-email: youemail@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://alexcarpenter.github.io" # the base hostname & protocol for your site
+    To prove my worth of living
+author: Minsu Kim
+email: minsu@kaist.ac.kr
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://minsuu.github.io" # the base hostname & protocol for your site
 twitter_username: hybrid_alex
-github_username:  alexcarpenter
+github_username:  minsuu
 
 # Build settings
 include: [_pages]
