@@ -17,3 +17,11 @@ layout: page
         </p>
     </footer>
 </article>
+
+{% if page.math %}
+var stylesheet = document.createElement('link');
+stylesheet.href = '/css/katex.min.css';
+stylesheet.rel = 'stylesheet';
+stylesheet.type = 'text/css';
+document.getElementsByTagName('head')[0].appendChild(stylesheet);
+{% endif %}

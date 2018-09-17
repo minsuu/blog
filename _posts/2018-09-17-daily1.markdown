@@ -3,6 +3,7 @@ layout: post
 title:  "daily #1"
 date:   2018-09-17 17:12:00 +0900
 categories: jekyll update
+math: true
 ---
 I've took [Kakao blind test][kakao] last week.
 It was an online coding test that took about 5hrs long.
