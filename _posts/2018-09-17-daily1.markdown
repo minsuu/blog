@@ -35,8 +35,8 @@ I used the this regular expression.
 ``([^A-Za-z]|\A)WORD([^A-Za-z]|\Z)``
 
 However, it was not able to count the case
-`WORD\nWORD` correctly. It is because `\Z` actually consumes one character,
-so that the next word cannot take one for next `\A` match.. Sigh.
+`WORD\nWORD` correctly. It is because the first match actually consumes `\n`,
+so that the next word cannot take one for next match.. Sigh.
 I am thinking about the correct version, but I think it needs some research.
 (Actually, it's [said][re] that this kind of thing is what RE is goot at.)
 
