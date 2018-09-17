@@ -18,7 +18,8 @@ I once thought about the stack depth, however, denied that possiblity
 since the maximum depth of a tree was $1000$. It was a sheer misunderstanding.
 
 Only after the test I found [that][slimit] Python has a very limited recursion depth($<998$).
-It was due to my first time using python in a test, and also this gave me a precious lesson using Python: *never think of using recursion*.
+It was my first time using python in a test, it was never a problem in C++.
+This gave me a precious lesson using Python: *never think of using recursion*.
 I also once read about [function call overhead][func] in Python.
 I sought after some optimizations for function calls in Python, but hardly could find any.
 
