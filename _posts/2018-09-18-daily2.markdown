@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "daily #2"
+date:   2018-09-18 20:06:00 +0900
+categories: productivity vscode
+math: true
+---
+
+I've heard many times that VS code is the best, but have not tried one yet
+since I felt comfortable with my current environment.
+However, when I began to use it, it changed a lot of things.
+
+![](/img/2018-09-18-daily2_2018-09-18-21-34-27.png)
+
+## before
+
+I used Vim in a remote server.

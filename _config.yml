@@ -1,7 +1,7 @@
 # Site settings
 title: daily.log
 description: >
-    To prove my worth of living
+    To prove my worth living
 author: Minsu Kim
 email: minsu@kaist.ac.kr
 baseurl: "/blog" # the subpath of your site, e.g. /blog

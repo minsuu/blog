@@ -2,7 +2,7 @@
 layout: post
 title:  "daily #1"
 date:   2018-09-17 17:12:00 +0900
-categories: jekyll update
+categories: kakao programming regular-expression
 math: true
 ---
 I've taken [Kakao blind test][kakao] last week.
@@ -50,7 +50,7 @@ This lookaround assersions do not consume any character so it rocks.
 
 ---
 
-To be honest, I seriously thought it will be a piece of cake
+To be honest, I seriously thought it would be a piece of cake
 (like qualification rounds in Google Codejam).
 So I had a plan to use all the 7 language
 (C++, Java, Python2, Python3, JavaScript, Swift, and Kotlin)

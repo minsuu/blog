@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "C:\\Users\\minsu\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+
+    "pasteImage.namePrefix": "${currentFileNameWithoutExt}_",
+    "pasteImage.path": "${projectRoot}/img",
+    "pasteImage.basePath": "${projectRoot}/",
+    "pasteImage.forceUnixStyleSeparator": true,
+    "pasteImage.prefix": "/"
+}
