@@ -1,7 +1,9 @@
-# butane-jekyll-theme
+# Welcome to my daily blog
 
-## Getting Started
-1. `git clone https://github.com/alexcarpenter/butane-jekyll-theme.git`
-2. `cd butane-jekyll-theme`
-3. `rm -rf CHANGELOG.md`
-4. `jekyll serve`
+You can view this website [here][here].
+
+[here]: https://minsu.github.io/blog
+
+It was forked by this [repo][repo].
+
+[repo]: https://github.com/alexcarpenter/butane-jekyll-theme
