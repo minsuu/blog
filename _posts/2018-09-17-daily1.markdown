@@ -52,7 +52,7 @@ These lookaround assertions do not consume any character so it rocks.
 
 To be honest, I seriously thought it would be a piece of cake
 (like qualification rounds in Google Codejam).
-So I had a plan to use all the 7 language
+So I had a plan to use all the 7 languages
 (C++, Java, Python2, Python3, JavaScript, Swift, and Kotlin)
 to solve 7 problems. After spending 2 hours
 trying to solve problem 2 and 3 in Javascript and Swift each,
