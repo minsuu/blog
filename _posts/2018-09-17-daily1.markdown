@@ -12,9 +12,9 @@ I was shocked that I've missed 2 problems out of 7!
 The first of the two was about reconstructing a tree given points
 with the $(x,y)$ coordinate, from specific rules like
 (a) parent has bigger $y$ coordinate than its children, and 
-(b) the left child has smaller $x$ coodrdinate than its parent.
+(b) the left child has smaller $x$ coordinate than its parent.
 I implemented it with recursion, then faced RTE(runtime error).
-I once thought about the stack depth, however, denied that possiblity
+I once thought about the stack depth, however, denied that possibility
 since the maximum depth of a tree was $1000$. It was a sheer misunderstanding.
 
 Only after the test I found [that][slimit] Python has a very limited recursion depth($<998$).
@@ -38,15 +38,15 @@ However, it was not able to count the case `WORD\nWORD` or `WORD2WORD` correctly
 It is because the first match actually consumes `\n` with the pattern `[^A-Za-z]|\Z`,
 so that the next word cannot take the match for another `[^A-Za-z]|\A`.. Sigh.
 I am thinking about the correct version, but I think it needs some research.
-(Actually, it's [said][re] that this kind of thing is what RE is NOT goot at.)
+(Actually, it's [said][re] that this kind of thing is what RE is NOT good at.)
 
 Nah, I found it. This works.
 
 ``(?<![A-Za-z])WORD(?![A-Za-z])``
 
-It uses lookbehind(`(?<!sth)`) and lookahead(`(?!sth)`) assersions to check if
+It uses lookbehind(`(?<!sth)`) and lookahead(`(?!sth)`) assertions to check if
 the word was not enclosed by alphabets. You can see the detail [here][re2].
-This lookaround assersions do not consume any character so it rocks.
+These lookaround assertions do not consume any character so it rocks.
 
 ---
 
