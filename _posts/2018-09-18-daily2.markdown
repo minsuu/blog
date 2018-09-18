@@ -14,21 +14,25 @@ However, when I began to use it, it changed a lot of things.
 
 ## Before
 
-I used Vim in a remote server for coding C++/Python.
-However, I've also spent most of time using markdown editor
+I really did like the Vim style editing.
+I almost banned using arrow keys, `Ctrl+F` should be used for navigation,
+and `Ctrl+V` should be mapped to visual blocks.
+
+So I used Vim in a remote server for coding C++/Python.
+However, I've also had to spend some time using markdown editor
 called [Typora][typora] to write some documents.
 It worked quite well for me, since I could get live view of latex equations.
 I also used Sublime Text for local files because it's hard to use terminal on
 Windows..
 
-So, I used 3 applications, each of which had its own rules..
-I really did like the Vim style editing, however, I missed
-the IDE-level smart linting. When I use other editors,
-Vim plugins of them were far from perfection.
+So, I used 3 applications, each of which had its own rules.
+There was no problem at all, but certainly not an ideal thing.
+Also, there were some points that Vim is missing: IDE-level smart linting.
 
 ## After
 
 I could replace all the programs above into one VS code environment.
+It supported linting quite well, with Pylint.
 Vim plugin in VS Code worked way better than in Sublime Text.
 I was able to get preview of my markdown by another plugin.
 I was also able to mimick the behavior of Typora for pasting images.
