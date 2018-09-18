@@ -25,20 +25,30 @@ I sought after some optimizations for function calls in Python, but hardly could
 
 The second one I missed was about parsing HTML tags.
 I think the hard part was counting words in the HTML file,
-which was constrained to text data, and was split by non-alphabetical chracters.
+which were in the text data, and were split by non-alphabetical characters.
 I continued to get WA(wrong answer) from it.
 In hindsight, I think I had a wrong regular expression counting words.
 
-For counting *words that was enclosed by non-alphabetical characters*,
+For counting *words that were enclosed by non-alphabetical characters*,
 I used the this regular expression.
 
 ``([^A-Za-z]|\A)WORD([^A-Za-z]|\Z)``
 
-However, it was not able to count the case
-`WORD\nWORD` correctly. It is because the first match actually consumes `\n`,
-so that the next word cannot take one for next match.. Sigh.
+However, it was not able to count the case `WORD\nWORD` or `WORD2WORD` correctly.
+It is because the first match actually consumes `\n` with the pattern `[^A-Za-z]|\Z`,
+so that the next word cannot take the match for another `[^A-Za-z]|\A`.. Sigh.
 I am thinking about the correct version, but I think it needs some research.
-(Actually, it's [said][re] that this kind of thing is what RE is goot at.)
+(Actually, it's [said][re] that this kind of thing is what RE is NOT goot at.)
+
+Nah, I found it. This works.
+
+``(?<![A-Za-z])WORD(?![A-Za-z])``
+
+It uses lookbehind(`(?<!sth)`) and lookahead(`(?!sth)`) assersions to check if
+the word was not enclosed by alphabets. You can see the detail [here][re2].
+This lookaround assersions do not consume any character so it rocks.
+
+---
 
 To be honest, I seriously thought it will be a piece of cake
 (like qualification rounds in Google Codejam).
@@ -46,9 +56,10 @@ So I had a plan to use all the 7 language
 (C++, Java, Python2, Python3, JavaScript, Swift, and Kotlin)
 to solve 7 problems. After spending 2 hours
 trying to solve problem 2 and 3 in Javascript and Swift each,
-I discovered it was a massive failure :smile:.
+I discovered I messed it up :stuck_out_tongue:.
 
 [kakao]: https://www.welcomekakao.com/competitions/79/2019-2nd-kakao-blind-recruitment
 [slimit]: https://stackoverflow.com/questions/3323001/what-is-the-maximum-recursion-depth-in-python-and-how-to-increase-it
 [func]: https://stackoverflow.com/questions/5790860/and-vs-list-and-dict-which-is-better
 [re]: https://stackoverflow.com/questions/406230/regular-expression-to-match-a-line-that-doesnt-contain-a-word
+[re2]: https://www.regular-expressions.info/lookaround.html
