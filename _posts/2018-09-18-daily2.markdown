@@ -35,7 +35,7 @@ I could replace all the programs above into one VS code environment.
 It supported linting quite well, with Pylint.
 Vim plugin in VS Code worked way better than in Sublime Text.
 I was able to get preview of my markdown by another plugin.
-I was also able to mimick the behavior of Typora for pasting images.
+I was also able to mimic the behavior of Typora for pasting images.
 
 The reason I haven't tried the recent text editors like Atom was
 simply its heaviness. However, I feel VS code is much lighter than Atom.
