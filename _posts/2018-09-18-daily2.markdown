@@ -8,7 +8,7 @@ math: true
 
 I've heard many times that VS code is the best, but have not tried one yet
 since I felt comfortable with my current environment.
-However, when I began to use it, it changed a lot of things:smiley:.
+However, when I began to use it, it changed a lot of things. :smiley:
 
 ![](/blog/img/2018-09-18-daily2_2018-09-18-23-29-02.png)
 

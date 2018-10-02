@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "BBR: Congestion-Based Congestion Control"
+date:   2018-10-02 16:06:00 +0900
+categories: network study
+math: true
+---
+
+I take Network Architecture class this semester.
+Thus, I've decided that I have to understand TCP at least.
+That's why I read this paper as a (seems-to-be) state-of-art TCP.
+
+## TCP Reno
+
+![](/blog/img/2018-10-02-BBR_2018-10-02-16-14-57.png)
+
+(excerpt from *Computer Networking: A Top Down Approach*)
+
+![](/blog/img/2018-10-02-BBR_2018-10-02-16-45-13.png)
+
+(excerpt from *Computer Networking: A Top Down Approach*)
+
+TCP congestion control consists of 3 states: Slow start, Fast recovery, Congestion avoidance.
+It begins at Slow start where the congestion window size(`cwnd`) is set 1 Maximum Segment Size(`MSS`).
+TCP sends segments by `cwnd` at one time until it receives ACK.
+In Slow start state, `cwnd` is increased by 1 `MSS` **every time it receives new ACK**, which leads to exponential increase of `cwnd`.
+It is a bit confusing, however, not hard to understand: if you send 4 segments in a round, it is expected to receive 4 ACKs. That leads to increase `cwnd` 4 times, resulting in 2*`cwnd` in the end.
+If this exponential increase reaches `ssthresh`, the state chages to Congestion avoidance.
+
+In Congestion avoidance state, each ACK only increases `cwnd` by `MSS*(MSS/cwnd)`, and ACK happens `cwnd\MSS` times in a round. Therefore, it makes `cwnd` increased by 1 `MSS` in a round, which is a linear increase.
+
+Congestion avoidance state continues until the segment loss occurs, resulting in duplicated ACKs. At the round 16, it enters Fast recovery since the condition `dupACKcount==3` in the diagram occurs. Entering Fast recovery state, `ssthresh` is set to `cwnd/2` and `cwnd` is set to `ssthresh+3*MSS`, which nearly halves its window size.
+
+Then it enters Congestion avoidance state again, since the ACK of missing segment is received. It continues to the linear increase, then a timeout occurs at round 23. This time, `cwnd` is initialized to 1 `MSS` and it enters to Slow start state.
+
+## References
+
+[1] https://stackoverflow.com/questions/30818925/tcp-congestion-control-fast-recovery-in-graph
